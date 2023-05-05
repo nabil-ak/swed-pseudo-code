@@ -8,6 +8,6 @@ public class Lender {
     private ArrayList<Reservation> reservations = new ArrayList<>();
     private ArrayList<Rental> rentals = new ArrayList<>();
 
-    public void createLender();
-    public void deleteLender();
+    public void createLender(){};
+    public void deleteLender(){};
 }

@@ -6,8 +6,8 @@ public class BookInventory{
     private ArrayList<Title> abolition = new ArrayList<>();
 
 
-    public boolean checkAcquisition();
-    public boolean checkAbolition();
-    public void createBook();
-    public void deleteBook();
+    public boolean checkAcquisition(){};
+    public boolean checkAbolition(){};
+    public void createBook(){};
+    public void deleteBook(){};
 }

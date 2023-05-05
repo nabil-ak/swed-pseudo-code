@@ -12,8 +12,8 @@ public class Rental {
     private Lender lender;
     private Damage damage;
 
-    public void startRent();
-    public void returnCopy();
-    public double calculateFee();
-    public void notifyLender();
+    public void startRent(){};
+    public void returnCopy(){};
+    public double calculateFee(){};
+    public void notifyLender(){};
 }

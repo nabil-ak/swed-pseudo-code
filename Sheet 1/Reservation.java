@@ -7,7 +7,7 @@ public class Reservation {
 
     private Title title;
 
-    public boolean checkCopy();
-    public void deleteReservation();
-    public void createReservation();
+    public boolean checkCopy(){};
+    public void deleteReservation(){};
+    public void createReservation(){};
 }

@@ -6,7 +6,7 @@ public class Damage{
     private String description;
     private double fees;
 
-    public void calculateFees();
-    public void createDamage();
-    public void deleteDamage();
+    public void calculateFees(){};
+    public void createDamage(){};
+    public void deleteDamage(){};
 }

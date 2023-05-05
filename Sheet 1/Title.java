@@ -14,5 +14,5 @@ public class Title {
     private ArrayList<Copy> copys = new ArrayList<>();
     private ArrayList<Reservation> reservations = new ArrayList<>(); 
 
-    public boolean CheckAvailability();
+    public boolean CheckAvailability(){};
 }
