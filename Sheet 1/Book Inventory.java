@@ -1,3 +1,5 @@
+package library;
+
 public class BookInventory{
     private int amountBooks;
 
