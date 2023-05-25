@@ -8,6 +8,13 @@ public class Damage{
     private String description;
     private double fees;
 
+    public Damage(int id, Date createDate, String description, double fees) {
+        this.id = id;
+        this.createDate = createDate;
+        this.description = description;
+        this.fees = fees;
+    }
+
     public void calculateFees(){};
 
 }

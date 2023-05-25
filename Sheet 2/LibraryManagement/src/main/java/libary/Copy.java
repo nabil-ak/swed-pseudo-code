@@ -6,6 +6,10 @@ public class Copy{
     private String status;
     private String condition;
 
-    private Title title;
-    private Rental rental;
+    public Copy(int id, int shelf, String status, String condition) {
+        this.id = id;
+        this.shelf = shelf;
+        this.status = status;
+        this.condition = condition;
+    }
 }

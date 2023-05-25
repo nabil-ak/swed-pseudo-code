@@ -13,17 +13,33 @@ public class Title {
     private String topic;
     private int amountCopies;
 
-    private ArrayList<Copy> copys = new ArrayList<>();
-    private ArrayList<Reservation> reservations = new ArrayList<>(); 
+    private ArrayList<Copy> copys;
 
-    public void addBook(Copy copy){
-        this.copys.add(copy);
+
+    public Title(int id, String name, String ISBN, String author, Date release, String publisher, String topic, int amountCopies) {
+        this.id = id;
+        this.name = name;
+        this.ISBN = ISBN;
+        this.author = author;
+        this.release = release;
+        this.publisher = publisher;
+        this.topic = topic;
+        this.amountCopies = amountCopies;
+        this.copys = new ArrayList<>();
+    }
+
+    public void addCopy(int id, int shelf, String status, String condition){
+        this.copys.add(new Copy(id, shelf, status, condition));
     };
 
-    public void removeBook(Copy copy){
-        this.copys.remove(copy);
+    public void removeCopy(Copy copy) throws Exception {
+        if(copy.rental == null){
+            this.copys.remove(copy);
+        }else{
+            throw new Exception("Copy is still rented out.");
+        }
     };
-    public boolean checkAvailability(){};
-    public boolean checkISBN(){};
+    public Copy checkAvailability(){};
+
     public void generateBibTeX(){};
 }

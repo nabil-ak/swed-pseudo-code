@@ -14,11 +14,21 @@ public class Rental {
     private Lender lender;
     private Damage damage;
 
+    public Rental(int id, int duration, Date startDate, Date deadline, Date returnDate, Copy copy, Lender lender) {
+        this.id = id;
+        this.duration = duration;
+        this.startDate = startDate;
+        this.deadline = deadline;
+        this.returnDate = returnDate;
+        this.copy = copy;
+        this.lender = lender;
+        this.damage = null;
+    }
 
     public void notifyLender(){};
 
-    public void createDamage(){
-        this.damage = new Damage();
+    public void createDamage(int id, Date createDate, String description, double fees){
+        this.damage = new Damage(id, createDate, description, fees);
     };
     public void deleteDamage(){
         this.damage = null;

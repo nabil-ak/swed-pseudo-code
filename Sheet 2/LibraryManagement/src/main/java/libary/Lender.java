@@ -8,21 +8,18 @@ public class Lender {
     private String email;
     private boolean activated;
 
-    private ArrayList<Reservation> reservations = new ArrayList<>();
-    private ArrayList<Rental> rentals = new ArrayList<>();
 
+    public Lender(String matriculationNumber, String name, String email) {
+        this.matriculationNumber = matriculationNumber;
+        this.name = name;
+        this.email = email;
+        this.activated = true;
+    }
 
     public void activateLender(){
         this.activated = true;
     };
     public void deactivateLender(){
         this.activated = false;
-    };
-
-    public void deleteReservation(Reservation reservation){
-        reservations.remove(reservation);
-    };
-    public void createReservation(Reservation reservation){
-        this.reservations.add(reservation);
     };
 }
