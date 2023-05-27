@@ -32,11 +32,11 @@ public class Title {
         this.copys.add(new Copy(id, shelf, status, condition));
     };
 
-    public void removeCopy(Copy copy) throws Exception {
-        if(copy.rental == null){
-            this.copys.remove(copy);
-        }else{
-            throw new Exception("Copy is still rented out.");
+    public void removeCopy(int id){
+        for (Copy c: copys){
+            if(c.id == id){
+                this.copys.remove(c);
+            }
         }
     };
     public Copy checkAvailability(){};

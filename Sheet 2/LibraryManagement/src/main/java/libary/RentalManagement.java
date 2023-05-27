@@ -19,8 +19,12 @@ public class RentalManagement {
         }
     };
 
-    public void deleteReservation(Reservation reservation){
-        reservations.remove(reservation);
+    public void deleteReservation(int id){
+        for(Reservation r: reservations){
+            if(r.id == id){
+                reservations.remove(r);
+            }
+        }
     };
     public void createReservation(int id, Date createDate, String status, Title title, Lender lender){
         this.reservations.add(new Reservation(id, createDate, status, title, lender));
